@@ -103,6 +103,8 @@ style.textContent = `
         box-shadow: 0 2px 5px rgba(0,0,0,0.4);
         word-break: break-all;
     }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-symbols-outlined.md-36 { font-size: 36px; }
 `;
 
 document.head.appendChild(style);
@@ -111,7 +113,7 @@ document.head.appendChild(style);
 function component() {
   const element = document.createElement("script");
   element.innerHTML = document.write(
-    '<section><button class="chat-btn"><i class="material-icons">comment</i></button><div class="chat-popup"><div class="chat-area"><div class="income-msg"><span class="msg">Hi, how can I help you?</span></div></div><div class="input-area"><input type="text" id="myInput"><button class="submit"><i class="material-icons">send</i></button></div></div></section>'
+    '<section><button class="chat-btn"><i class="material-icons">comment</i></button><div class="chat-popup"><div class="chat-area"><div class="income-msg"><i class="material-symbols-outlined md-36">support_agent</i><span class="msg">Hi, how can I help you?</span></div></div><div class="input-area"><input type="text" id="myInput"><button class="submit"><i class="material-icons">send</i></button></div></div></section>'
   );
   return element;
 }
@@ -119,6 +121,7 @@ function component() {
 document.body.appendChild(component());
 
 // -------------------Include bot image-------------------
+/*
 var bot_img = document.createElement("img");
 bot_img.src = "./img/bot-icon.jpg";
 bot_img.setAttribute(
@@ -128,6 +131,7 @@ bot_img.setAttribute(
 document
   .querySelector(".income-msg")
   .insertAdjacentElement("afterbegin", bot_img);
+  */
 
 // -------------------Javascript handler for user interaction-------------------
 const popup = document.querySelector(".chat-popup");
@@ -146,7 +150,7 @@ function inputHandler() {
   let temp = `
     <div class="out-msg">
         <span class="my-msg">${userInput}</span>
-        <img src="img/user-icon.png" class="avatar">
+        <i class="material-icons md-36">face</i>
     </div>`;
   chatArea.insertAdjacentHTML("beforeend", temp);
   inputEle.value = "";
