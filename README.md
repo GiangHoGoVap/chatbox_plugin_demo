@@ -9,3 +9,6 @@ To use this chatbox plugin, you have to add this to <strong>index.html</strong>:
 
 # :bug: Bug :bug:
 This plugin fails to import the images of bot and user in the chat area.
+
+# 🚧 Temporary solution 🚧
+Use icons instead of images
